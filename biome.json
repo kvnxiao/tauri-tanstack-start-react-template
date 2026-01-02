@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**/*.json",
+      "**/*.js",
+      "**/*.ts",
+      "**/*.jsx",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.mjs",
+      "!!dist",
+      "!!src-tauri",
+      "!!node_modules",
+      "!!.output",
+      "!!.tanstack"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "useHookAtTopLevel": "error"
+      },
+      "nursery": {},
+      "suspicious": {
+        "useGoogleFontDisplay": "error",
+        "noDocumentImportInPage": "error",
+        "noHeadImportInDocument": "error"
+      },
+      "style": {
+        "noHeadElement": "error",
+        "useComponentExportOnlyModules": {
+          "level": "error",
+          "options": {
+            "allowExportNames": ["metadata"]
+          }
+        }
+      },
+      "performance": {
+        "noImgElement": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    },
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    },
+    "globals": []
+  }
+}
