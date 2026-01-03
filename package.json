@@ -10,9 +10,12 @@
     "tauri": "tauri",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check",
+    "fix": "biome check --write"
   },
   "dependencies": {
+    "@fontsource-variable/geist": "^5.2.8",
+    "@fontsource-variable/geist-mono": "^5.2.7",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "^0.9.0",
     "@tanstack/react-router": "^1.144.0",
@@ -22,7 +25,6 @@
     "@tanstack/router-plugin": "^1.145.2",
     "@tauri-apps/api": "^2.9.1",
     "@tauri-apps/plugin-opener": "^2.5.2",
-    "lucide-react": "^0.562.0",
     "nitro": "npm:nitro-nightly@3.0.1-20251230-165713-6e801e22",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

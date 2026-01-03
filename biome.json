@@ -19,7 +19,8 @@
       "!!src-tauri",
       "!!node_modules",
       "!!.output",
-      "!!.tanstack"
+      "!!.tanstack",
+      "!src/routeTree.gen.ts"
     ]
   },
   "formatter": {
@@ -52,7 +53,7 @@
         "useComponentExportOnlyModules": {
           "level": "error",
           "options": {
-            "allowExportNames": ["metadata"]
+            "allowExportNames": ["Route"]
           }
         }
       },
@@ -74,5 +75,17 @@
       "quoteStyle": "double"
     },
     "globals": []
-  }
+  },
+  "overrides": [
+    {
+      "linter": {
+        "rules": {
+          "style": {
+            "noHeadElement": "off"
+          }
+        }
+      },
+      "includes": ["src/routes/__root.tsx"]
+    }
+  ]
 }
