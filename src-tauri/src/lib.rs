@@ -1,7 +1,11 @@
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
+use std::time::{SystemTime, UNIX_EPOCH};
+
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+fn greet() -> String {
+    let now = SystemTime::now();
+    let epoch_ms = now.duration_since(UNIX_EPOCH).unwrap().as_millis();
+    format!("Hello world from Rust! Current epoch: {epoch_ms}")
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
