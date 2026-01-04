@@ -1,6 +1,6 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "Tauri TanStack App",
+  "name": "Tauri TanStack Start React Template",
   "icons": [
     {
       "src": "favicon.ico",
