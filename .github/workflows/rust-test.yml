@@ -44,8 +44,6 @@ jobs:
           toolchain: stable
           cache: true
 
-      - name: Install just command runner
-        uses: extractions/setup-just@v3
-
       - name: Run tests
-        run: just test
+        run: cargo test --all --all-features
+        working-directory: src-tauri

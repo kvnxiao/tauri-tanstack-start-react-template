@@ -43,8 +43,10 @@ jobs:
           toolchain: stable
           cache: true
 
-      - name: Install just command runner
-        uses: extractions/setup-just@v3
+      - name: Run lint
+        run: cargo clippy --all-targets --all-features
+        working-directory: src-tauri
 
-      - name: Run lint and formatting checks
-        run: just lint
+      - name: Run format check
+        run: cargo fmt --all -- --check
+        working-directory: src-tauri
