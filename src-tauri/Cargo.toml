@@ -1,0 +1,57 @@
+[package]
+name = "tauri-tanstack-start-react-template"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_tanstack_start_react_template_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+# Deny all warnings - treat them as errors
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+cargo = { level = "deny", priority = -1 }
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+# Unimplemented items can be left as warnings
+todo = "warn"
+unimplemented = "warn"
+
+# Correctness (deny)
+cast_lossless = "deny"
+cast_possible_truncation = "deny"
+cast_possible_wrap = "deny"
+cast_precision_loss = "deny"
+cast_sign_loss = "deny"
+
+# Performance (warn/deny)
+inefficient_to_string = "deny"
+large_enum_variant = "warn"
+large_stack_arrays = "warn"
+needless_pass_by_value = "warn"
+
+# Style (warn)
+missing_errors_doc = "warn"
+missing_panics_doc = "warn"
