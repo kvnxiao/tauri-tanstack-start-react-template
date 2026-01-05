@@ -1,0 +1,45 @@
+# Installs Node.js dependencies and pnpm, and checks formatting + linting
+
+name: Lint Frontend
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - "src-tauri/**"
+      - "README.md"
+
+jobs:
+  frontend-lint:
+    name: Frontend linting
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Disable git core.autocrlf on Windows
+        if: matrix.os == 'windows-latest'
+        run: git config --global core.autocrlf false
+
+      - name: Checkout repository code
+        uses: actions/checkout@v5
+
+      - name: Set up pnpm package manager
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: "pnpm"
+
+      - name: Install dependencies from lockfile
+        run: pnpm install --frozen-lockfile
+
+      - name: Run lint step
+        run: pnpm lint
