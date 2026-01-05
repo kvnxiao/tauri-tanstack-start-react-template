@@ -10,8 +10,7 @@
     "test": "vitest run",
     "tauri": "tauri",
     "format": "biome format",
-    "lint": "biome lint",
-    "check": "biome check",
+    "lint": "biome check",
     "fix": "biome check --write",
     "dev": "pnpm tauri dev",
     "build": "pnpm tauri build"
