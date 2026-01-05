@@ -1,6 +1,6 @@
 # Installs Node.js dependencies and pnpm, and checks formatting + linting
 
-name: Lint Frontend
+name: Frontend linting
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - "README.md"
 
 jobs:
-  frontend-lint:
+  frontend-linting:
     name: Frontend linting
     strategy:
       fail-fast: true
