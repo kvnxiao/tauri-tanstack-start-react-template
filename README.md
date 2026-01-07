@@ -1,5 +1,7 @@
 # Tauri 2.0 + TanStack Start React Template
 
+![Tauri window screenshot](public/tauri-tanstack-start-react-template-screenshot-01.png)
+
 This is a [Tauri 2.0](https://v2.tauri.app/) project template using [TanStack Start](https://tanstack.com/start/latest),
 bootstrapped by combining [`create @tanstack/start`](https://tanstack.com/start/latest/docs/framework/react/quick-start)
 and [`create tauri-app`](https://v2.tauri.app/start/create-project/).
