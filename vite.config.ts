@@ -13,13 +13,13 @@ type SpaOptions = NonNullable<TanStackStartInputConfig["spa"]>;
 type SpaPrerenderOptions = NonNullable<SpaOptions["prerender"]>;
 type RegularPrerenderOptions = NonNullable<SpaOptions["prerender"]>;
 
-const host = process.env.TAURI_DEV_HOST;
+const host: string | undefined = process.env.TAURI_DEV_HOST;
 
 // Read from environment variable to pick which prerender mode to use.
 // Defaults to false, which will pick the SPA prerender mode
-const useSsrPrerenderString =
+const useSsrPrerenderString: string =
   process.env.USE_SSR_PRERENDER_MODE?.toLowerCase() ?? "false";
-const useSsrPrerenderMode =
+const useSsrPrerenderMode: boolean =
   useSsrPrerenderString === "true" || useSsrPrerenderString === "1";
 
 const sharedPrerenderOptions: SpaPrerenderOptions & RegularPrerenderOptions = {
