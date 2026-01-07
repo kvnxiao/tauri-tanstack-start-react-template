@@ -17,9 +17,10 @@ const host = process.env.TAURI_DEV_HOST;
 
 // Read from environment variable to pick which prerender mode to use.
 // Defaults to false, which will pick the SPA prerender mode
+const useSsrPrerenderString =
+  process.env.USE_SSR_PRERENDER_MODE?.toLowerCase() ?? "false";
 const useSsrPrerenderMode =
-  process.env.USE_SSR_PRERENDER_MODE === "true" ||
-  process.env.USE_SSR_PRERENDER_MODE === "1";
+  useSsrPrerenderString === "true" || useSsrPrerenderString === "1";
 
 const sharedPrerenderOptions: SpaPrerenderOptions & RegularPrerenderOptions = {
   enabled: true,

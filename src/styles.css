@@ -1,17 +1,17 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist";
-@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
 
 @theme {
-  --font-sans: "Geist Variable", sans-serif;
-  --font-mono: "Geist Mono Variable", monospace;
+  --font-sans: "Inter Variable", sans-serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-geist-sans: "Geist Variable", sans-serif;
-  --font-geist-mono: "Geist Mono Variable", monospace;
+  --font-inter-sans: "Inter Variable", sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono Variable", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,12 +24,12 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-inter-sans);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-jetbrains-mono);
 }
