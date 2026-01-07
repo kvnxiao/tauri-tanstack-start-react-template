@@ -12,8 +12,8 @@
     "format": "biome format",
     "lint": "biome check",
     "fix": "biome check --write",
-    "dev": "pnpm tauri dev",
-    "build": "pnpm tauri build"
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
