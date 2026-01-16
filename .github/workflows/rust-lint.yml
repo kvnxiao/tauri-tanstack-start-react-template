@@ -12,6 +12,8 @@ env:
 jobs:
   rust-linting:
     name: Rust cross-platform linting
+    permissions:
+      contents: read
     strategy:
       fail-fast: true
       matrix:
