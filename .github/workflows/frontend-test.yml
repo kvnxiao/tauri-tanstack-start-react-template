@@ -1,6 +1,8 @@
 # Installs Node.js dependencies and pnpm, and checks formatting + linting
 
 name: Frontend tests
+permissions:
+  contents: read
 
 on:
   push:
