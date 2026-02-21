@@ -45,7 +45,8 @@
       "recommended": true,
       "correctness": {
         "useHookAtTopLevel": "error",
-        "useImportExtensions": "off"
+        "useImportExtensions": "off",
+        "noUnresolvedImports": "off"
       },
       "nursery": {
         "noFloatingPromises": "error",
