@@ -4,7 +4,6 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
-import viteTsConfigPaths from "vite-tsconfig-paths";
 
 type TanStackStartInputConfig = NonNullable<
   Parameters<typeof tanstackStart>[0]
@@ -55,10 +54,6 @@ export default defineConfig(async () => ({
   plugins: [
     devtools(),
     nitro(),
-    // this is the plugin that enables path aliases
-    viteTsConfigPaths({
-      projects: ["./tsconfig.json"],
-    }),
     tailwindcss(),
     tanstackStart({
       spa: (!useSsrPrerenderMode
@@ -70,6 +65,11 @@ export default defineConfig(async () => ({
     }),
     viteReact(),
   ],
+
+  // Resolve path aliases from tsconfig.json
+  resolve: {
+    tsconfigPaths: true,
+  },
 
   // Prevent Vite from obscuring rust errors
   clearScreen: false,

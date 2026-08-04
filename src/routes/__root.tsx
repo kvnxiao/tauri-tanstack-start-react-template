@@ -1,20 +1,15 @@
-import {
-  createRootRoute,
-  HeadContent,
-  Outlet,
-  Scripts,
-} from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 
-export const RootComponent: React.FC = () => {
+const RootDocument = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
         <HeadContent />
       </head>
       <body className="antialiased">
-        <Outlet />
+        {children}
         <Scripts />
       </body>
     </html>
@@ -43,5 +38,5 @@ export const Route = createRootRoute({
     ],
   }),
 
-  component: RootComponent,
+  shellComponent: RootDocument,
 });
