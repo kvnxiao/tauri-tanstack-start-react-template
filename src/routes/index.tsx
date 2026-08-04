@@ -3,7 +3,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { useCallback, useState } from "react";
 import { RoundedButton } from "../components/RoundedButton";
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   const [greeted, setGreeted] = useState<string | null>(null);
 
   const greet = useCallback((): void => {

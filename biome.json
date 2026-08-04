@@ -42,7 +42,7 @@
       "react": "all"
     },
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "useHookAtTopLevel": "error",
         "useImportExtensions": "off",
@@ -95,6 +95,16 @@
         }
       },
       "includes": ["src/routes/__root.tsx"]
+    },
+    {
+      "linter": {
+        "rules": {
+          "style": {
+            "useComponentExportOnlyModules": "off"
+          }
+        }
+      },
+      "includes": ["src/routes/**"]
     }
   ]
 }
