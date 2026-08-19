@@ -19,12 +19,12 @@
     "@fontsource-variable/inter": "^5.3.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
-    "@tanstack/react-devtools": "^0.10.9",
-    "@tanstack/react-router": "^1.170.25",
+    "@tanstack/react-devtools": "^0.10.10",
+    "@tanstack/react-router": "^1.170.29",
     "@tanstack/react-router-devtools": "^1.167.1",
     "@tanstack/react-router-ssr-query": "^1.167.1",
-    "@tanstack/react-start": "^1.168.42",
-    "@tanstack/router-plugin": "^1.168.29",
+    "@tanstack/react-start": "^1.168.46",
+    "@tanstack/router-plugin": "^1.168.32",
     "@tauri-apps/api": "^2.11.1",
     "@tauri-apps/plugin-opener": "^2.5.4",
     "nitro": "3.0.260610-beta",
@@ -33,13 +33,13 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.7",
+    "@biomejs/biome": "^2.5.8",
     "@tanstack/devtools-vite": "^0.8.3",
     "@tauri-apps/cli": "^2.11.4",
     "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^14.6.3",
+    "@testing-library/user-event": "^14.6.4",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
@@ -48,6 +48,6 @@
     "typescript": "^7.0.2",
     "vite": "^8.2.1",
     "vitest": "^4.1.10",
-    "web-vitals": "^6.1.0"
+    "web-vitals": "^6.1.1"
   }
 }
