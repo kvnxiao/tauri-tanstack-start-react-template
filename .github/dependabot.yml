@@ -5,6 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # pnpm rejects lockfile entries published less than 1 day ago; cooldown applies the same floor to transitive updates.
+    cooldown:
+      default-days: 1
     allow:
       - dependency-type: "all"
     groups:
