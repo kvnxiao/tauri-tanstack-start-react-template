@@ -20,6 +20,9 @@ const useSsrPrerenderString: string =
   process.env.USE_SSR_PRERENDER_MODE?.toLowerCase() ?? "false";
 const useSsrPrerenderMode: boolean =
   useSsrPrerenderString === "true" || useSsrPrerenderString === "1";
+const isMobile = ["android", "ios"].includes(
+    process.env.TAURI_ENV_PLATFORM ?? "",
+);
 
 const sharedPrerenderOptions: SpaPrerenderOptions & RegularPrerenderOptions = {
   enabled: true,
@@ -52,7 +55,7 @@ const spaWithPrerenderOptions: SpaOptions = {
 // See: https://vite.dev/config/
 export default defineConfig(async () => ({
   plugins: [
-    devtools(),
+    !isMobile && devtools(),
     nitro(),
     tailwindcss(),
     tanstackStart({
